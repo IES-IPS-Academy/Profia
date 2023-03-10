@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Bootstrap/Header";
+import Code from "./Code";
+import Details from "./Details";
 class App extends Component {
   state = {
     Dark: true,
@@ -23,8 +25,12 @@ class App extends Component {
         </Header>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-12 col-sm-6">Details</div>
-            <div className="col-12 col-sm-6">Code</div>
+            <div className="col-12 col-sm-6">
+              <Details />
+            </div>
+            <div className="col-12 col-sm-6">
+              <Code />
+            </div>
           </div>
         </div>
       </div>
