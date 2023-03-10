@@ -1,4 +1,15 @@
-const Code = () => {
+const Code = ({
+  FullName,
+  Thumbnail,
+  URL,
+  Description,
+  KeyWords,
+  FirstName,
+  LastName,
+  Address,
+  Phone,
+  Email,
+}) => {
   return (
     <div className="Code">
       <pre className="broder rounded bg-light p-3">{`<!DOCTYPE html>
@@ -6,22 +17,22 @@ const Code = () => {
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="author" content="{FullName}" />
-        <meta property="og:title" content="{FullName}'s Portfolio" />
-        <meta property="og:site_name" content="{FullName}'s Portfolio" />
-        <meta property="og:url" content="{URL}" />
-        <meta property="og:description" content="{Description}" />
+        <meta name="author" content="${FullName}" />
+        <meta property="og:title" content="${FullName}'s Portfolio" />
+        <meta property="og:site_name" content="${FullName}'s Portfolio" />
+        <meta property="og:url" content="${URL}" />
+        <meta property="og:description" content="${Description}" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="{Thumbnail}" />
-        <meta name="title" content="{FullName}'s Portfolio" />
-        <meta name="description" content="{Description}" />
-        <meta name="keywords" content="{KeyWords}" />
+        <meta property="og:image" content="${Thumbnail}" />
+        <meta name="title" content="${FullName}'s Portfolio" />
+        <meta name="description" content="${Description}" />
+        <meta name="keywords" content="${KeyWords}" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="{URL}" />
-        <meta property="twitter:title" content="{FullName}'s Portfolio" />
-        <meta property="twitter:description" content="{Description}" />
-        <meta property="twitter:image" content="{Thumbnail}" />
-        <title>Portfolio_AuthorName's Portfolio</title>
+        <meta property="twitter:url" content="${URL}" />
+        <meta property="twitter:title" content="${FullName}'s Portfolio" />
+        <meta property="twitter:description" content="${Description}" />
+        <meta property="twitter:image" content="${Thumbnail}" />
+        <title>${FullName}'s Portfolio</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -35,8 +46,8 @@ const Code = () => {
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">{FullName}</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{Thumbnail}" alt="{FullName}" /></span>
+                <span class="d-block d-lg-none">${FullName}</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${Thumbnail}" alt="${FullName}" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -56,14 +67,14 @@ const Code = () => {
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        {FirstName}
-                        <span class="text-primary">{LastName}</span>
+                        ${FirstName}
+                        <span class="text-primary">${LastName}</span>
                     </h1>
                     <div class="subheading mb-5">
-                        {Address} · {Phone} ·
-                        <a href="mailto:name@email.com">{Email}</a>
+                        ${Address} · ${Phone} ·
+                        <a href="mailto:name@email.com">${Email}</a>
                     </div>
-                    <p class="lead mb-5">{Description}</p>
+                    <p class="lead mb-5">${Description}</p>
                     <div class="social-icons">
                         <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
