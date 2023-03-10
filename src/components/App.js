@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./Bootstrap/Header";
 class App extends Component {
   state = {
-    Dark: false,
+    Dark: true,
   };
   toggleHeader = () => {
     this.setState({
@@ -12,13 +12,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header dark={this.state.Dark} classsname="mb-5">
-          Portfolio Generator
+        <Header dark={this.state.Dark} classsname="mb-5 justify-content-center">
+          <span>Portfolio Generator</span>
           <button
-            className={`btn btn${this.state.Dark ? "-outline" : ""}-primary`}
+            className="btn btn-sm btn-outline-primary ml-3 rounded-circle"
             onClick={this.toggleHeader}
           >
-            Toggle Dark mode
+            <i class={"fa fa-" + (this.state.Dark ? "sun" : "moon") + "-o"}></i>
           </button>
         </Header>
       </div>
