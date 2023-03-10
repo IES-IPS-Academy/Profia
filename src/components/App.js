@@ -12,6 +12,18 @@ class App extends Component {
     });
   };
   render() {
+    const Data = {
+      FullName: "Value of FullName",
+      Thumbnail: "Value of Thumbnail",
+      URL: "Value of URL",
+      Description: "Value of Description",
+      KeyWords: "Value of KeyWords",
+      FirstName: "Value of FirstName",
+      LastName: "Value of LastName",
+      Address: "Value of Address",
+      Phone: "Value of Phone",
+      Email: "Value of Email",
+    };
     return (
       <div className="App">
         <Header dark={this.state.Dark} className="Header">
@@ -29,7 +41,7 @@ class App extends Component {
               <Details />
             </div>
             <div className="col-12 col-sm-6">
-              <Code />
+              <Code {...Data} />
             </div>
           </div>
         </div>
