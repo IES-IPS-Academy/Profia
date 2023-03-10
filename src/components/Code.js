@@ -179,6 +179,14 @@ const Code = () => {
             </section>
         <hr class="m-0" />
             <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Paragraph-1</p>
+                    <p class="mb-0">Paragraph-2</p>
+                </div>
+            </section>
+        <hr class="m-0" />
             <!-- Awards-->
     </body>
 </html>`}</pre>
