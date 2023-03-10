@@ -1,0 +1,21 @@
+.Header {
+    margin-bottom: 15px;
+    display: flex;
+    flex-grow: 1;
+    .navbar-brand {
+        flex-grow: 1;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        >span:first-child {
+            flex: 1 0 0;
+            text-align: center;
+        }
+    }
+    button {
+        flex-shrink: 1;
+    }
+    .btn-sn {
+        margin-left: auto;
+    }
+}
