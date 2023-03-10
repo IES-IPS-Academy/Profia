@@ -14,8 +14,13 @@
     }
     button {
         flex-shrink: 1;
+        user-select: none;
     }
     .btn-sn {
         margin-left: auto;
     }
+    .btn:focus {
+        outline: none;
+        box-shadow: none;
+      }
 }
