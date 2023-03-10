@@ -5,14 +5,7 @@ import Details from "./Details";
 class App extends Component {
   state = {
     Dark: true,
-  };
-  toggleHeader = () => {
-    this.setState({
-      Dark: !this.state.Dark,
-    });
-  };
-  render() {
-    const Data = {
+    DetailsData: {
       FullName: "Value of FullName",
       Thumbnail: "Value of Thumbnail",
       URL: "Value of URL",
@@ -23,7 +16,14 @@ class App extends Component {
       Address: "Value of Address",
       Phone: "Value of Phone",
       Email: "Value of Email",
-    };
+    },
+  };
+  toggleHeader = () => {
+    this.setState({
+      Dark: !this.state.Dark,
+    });
+  };
+  render() {
     return (
       <div className="App">
         <Header dark={this.state.Dark} className="Header">
@@ -41,7 +41,7 @@ class App extends Component {
               <Details />
             </div>
             <div className="col-12 col-sm-6">
-              <Code {...Data} />
+              <Code {...this.state.DetailsData} />
             </div>
           </div>
         </div>
