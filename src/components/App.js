@@ -21,6 +21,12 @@ class App extends Component {
             <i class={"fa fa-" + (this.state.Dark ? "sun" : "moon") + "-o"}></i>
           </button>
         </Header>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-12 col-sm-6">Details</div>
+            <div className="col-12 col-sm-6">Code</div>
+          </div>
+        </div>
       </div>
     );
   }
