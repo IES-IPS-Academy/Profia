@@ -29,7 +29,7 @@ class App extends Component {
               <Details />
             </div>
             <div className="col-12 col-sm-6">
-              <Code />
+              <Code FullName="ABC" />
             </div>
           </div>
         </div>
