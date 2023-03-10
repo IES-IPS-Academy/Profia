@@ -1,5 +1,9 @@
 const Code = () => {
-  return <div className="Code">Output Code Here...</div>;
+  return (
+    <div className="Code">
+      <pre className="broder rounded bg-light p-3">{`Hello`}</pre>
+    </div>
+  );
 };
 
 export default Code;
