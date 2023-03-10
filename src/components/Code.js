@@ -64,6 +64,12 @@ const Code = () => {
                         <a href="mailto:name@email.com">{Email}</a>
                     </div>
                     <p class="lead mb-5">{Description}</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
         </section>
         <hr class="m-0" />
