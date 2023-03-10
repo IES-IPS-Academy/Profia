@@ -49,7 +49,15 @@ const Code = () => {
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
                 </ul>
             </div>
-        </nav> 
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <!-- Experience-->
+            <!-- Education-->
+            <!-- Skills-->
+            <!-- Interests-->
+            <!-- Awards-->
     </body>
 </html>`}</pre>
     </div>
