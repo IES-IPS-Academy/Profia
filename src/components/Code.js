@@ -53,6 +53,20 @@ const Code = () => {
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        {FirstName}
+                        <span class="text-primary">{LastName}</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        {Address} · {Phone} ·
+                        <a href="mailto:name@email.com">{Email}</a>
+                    </div>
+                    <p class="lead mb-5">{Description}</p>
+                </div>
+        </section>
+        <hr class="m-0" />
             <!-- Experience-->
             <!-- Education-->
             <!-- Skills-->
