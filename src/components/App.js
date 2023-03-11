@@ -28,7 +28,12 @@ class App extends Component {
     });
   };
   handleChange = (e) => {
-    console.log(`${e.target.name}: ${e.target.value}`);
+    this.setState({
+      DetailsData: {
+        ...this.state.DetailsData,
+        [e.target.name]: e.target.value,
+      },
+    });
   };
   render() {
     return (
