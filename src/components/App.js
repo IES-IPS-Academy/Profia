@@ -10,13 +10,12 @@ class App extends Component {
     Dark: true,
     // Default values for user details
     DetailsData: {
-      FullName: "Value of FullName",
+      FirstName: "Value of FirstName",
+      LastName: "Value of LastName",
       Thumbnail: "Value of Thumbnail",
       URL: "Value of URL",
       Description: "Value of Description",
       KeyWords: "Value of KeyWords",
-      FirstName: "Value of FirstName",
-      LastName: "Value of LastName",
       Address: "Value of Address",
       Phone: "Value of Phone",
       Email: "Value of Email",
@@ -44,11 +43,18 @@ class App extends Component {
         </Header>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-12 col-sm-6">
+            <div className="col-12 col-sm-6 scroll-div">
               <Details DetailsData={this.state.DetailsData} />
             </div>
             <code className="col-12 col-sm-6 scroll-div">
-              <Code {...this.state.DetailsData} />
+              <Code
+                {...this.state.DetailsData}
+                Fullname={
+                  this.state.DetailsData.FirstName +
+                  " " +
+                  this.state.DetailsData.LastName
+                }
+              />
             </code>
           </div>
         </div>
