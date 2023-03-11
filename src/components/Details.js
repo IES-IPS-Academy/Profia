@@ -34,11 +34,12 @@ const Details = ({ DetailsData, onChange }) => {
       {Object.keys(DetailsData).map((fd) => (
         <FormGroup
           key={fd}
+          Value={DetailsData[fd]}
           Label={Desc[fd][1]}
           Type={Desc[fd][1]}
           Id={fd}
           Desc={Desc[fd][2]}
-          onChange={onChange}
+          onChange={fd === "FullName" ? undefined : onChange}
         />
       ))}
     </div>
