@@ -40,9 +40,9 @@ class App extends Component {
             <div className="col-12 col-sm-6">
               <Details />
             </div>
-            <div className="col-12 col-sm-6">
+            <code className="col-12 col-sm-6 scroll-div">
               <Code {...this.state.DetailsData} />
-            </div>
+            </code>
           </div>
         </div>
       </div>
