@@ -49,11 +49,7 @@ class App extends Component {
             <code className="col-12 col-sm-6 scroll-div">
               <Code
                 {...this.state.DetailsData}
-                Fullname={
-                  this.state.DetailsData.FirstName +
-                  " " +
-                  this.state.DetailsData.LastName
-                }
+                FullName={`${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`}
               />
             </code>
           </div>
