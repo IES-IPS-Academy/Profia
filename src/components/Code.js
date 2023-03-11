@@ -239,6 +239,8 @@ const Code = ({
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="https://github.com/JustA3DObject/portfolio-resume-generator/blob/main/src/components/Javascript.js"></script>
     </body>
 </html>`}</pre>
     </div>

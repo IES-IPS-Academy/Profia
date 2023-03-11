@@ -17,7 +17,7 @@ const Details = ({ DetailsData, onChange }) => {
     URL: [
       "text",
       "Website link",
-      "Please enter the link of your portfolio here once you host it.",
+      "Please enter the link of your project here.",
     ],
     Description: [
       "text",
@@ -27,7 +27,7 @@ const Details = ({ DetailsData, onChange }) => {
     KeyWords: [
       "text",
       "KeyWords",
-      "Please enter some keywords for search engine.",
+      "Please enter some keywords for search engine with comma separated values (ex. name, college, your qualities etc).  ",
     ],
     Address: ["text", "Address", "Enter your full address to get kidnapped."],
     Phone: ["text", "Phone number", "Please enter your phone number."],
