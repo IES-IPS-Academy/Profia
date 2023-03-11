@@ -38,6 +38,7 @@ const Details = ({ DetailsData, onChange }) => {
           Label={Desc[fd][1]}
           Type={Desc[fd][1]}
           Id={fd}
+          Placeholder={`Enter input for ${Desc[fd][1]}`}
           Desc={Desc[fd][2]}
           onChange={fd === "FullName" ? undefined : onChange}
         />
