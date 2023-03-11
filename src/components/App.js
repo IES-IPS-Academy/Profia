@@ -44,7 +44,12 @@ class App extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-sm-6 scroll-div">
-              <Details DetailsData={this.state.DetailsData} />
+              <Details
+                DetailsData={{
+                  FullName: `${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`,
+                  ...this.state.DetailsData,
+                }}
+              />
             </div>
             <code className="col-12 col-sm-6 scroll-div">
               <Code
