@@ -38,7 +38,7 @@ class App extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-sm-6">
-              <Details />
+              <Details DetailsData={this.state.DetailsData} />
             </div>
             <code className="col-12 col-sm-6 scroll-div">
               <Code {...this.state.DetailsData} />
