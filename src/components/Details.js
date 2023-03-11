@@ -4,7 +4,7 @@ const Details = ({ DetailsData }) => {
   return (
     <div className="Details">
       {Object.keys(DetailsData).map((fd) => (
-        <FormGroup />
+        <FormGroup key={fd} Label={fd} />
       ))}
     </div>
   );
