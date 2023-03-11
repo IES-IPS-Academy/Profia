@@ -19,6 +19,14 @@ class App extends Component {
       Address: "",
       Phone: "",
       Email: "",
+      Experience: [],
+      Education: [],
+      Skills: {
+        Tools: [],
+        Workflow: [],
+      },
+      Interests: [],
+      Awards: [],
     },
   };
   // Functiion to toggle dark mode for header
