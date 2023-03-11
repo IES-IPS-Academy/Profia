@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import Header from "./Bootstrap/Header";
 import Code from "./Code";
 import Details from "./Details";
+
+// React class component for the App
 class App extends Component {
   state = {
+    // Default state for app header
     Dark: true,
+    // Default values for user details
     DetailsData: {
       FullName: "Value of FullName",
       Thumbnail: "Value of Thumbnail",
@@ -18,6 +22,7 @@ class App extends Component {
       Email: "Value of Email",
     },
   };
+  // Functiion to toggle dark mode for header
   toggleHeader = () => {
     this.setState({
       Dark: !this.state.Dark,
@@ -25,6 +30,7 @@ class App extends Component {
   };
   render() {
     return (
+      // this.state.Dark sets current state of dark variable to header (True gives dark and False gives light mode)
       <div className="App">
         <Header dark={this.state.Dark} className="Header">
           <span>Portfolio Generator</span>
@@ -32,6 +38,7 @@ class App extends Component {
             className="btn btn-sm btn-outline-primary ml-3 rounded-circle"
             onClick={this.toggleHeader}
           >
+            {/* this.state.Dark checks for boolean value of dark variable. If it is true, the option shown is to switch to light mode, if false, the option shown is dark mode */}
             <i class={"fa fa-" + (this.state.Dark ? "sun" : "moon") + "-o"}></i>
           </button>
         </Header>

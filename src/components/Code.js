@@ -1,3 +1,4 @@
+// Object that contains all the variable names used to generate output code
 const Code = ({
   FullName,
   Thumbnail,
@@ -10,6 +11,7 @@ const Code = ({
   Phone,
   Email,
 }) => {
+  // Return contains the code that will be generate as output to the user
   return (
     <div className="Code">
       <pre className="broder rounded bg-light p-3">{`<!DOCTYPE html>
