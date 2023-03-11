@@ -19,8 +19,25 @@ class App extends Component {
       Address: "",
       Phone: "",
       Email: "",
-      Experience: [],
-      Education: [],
+      Experience: [
+        {
+          Role: "",
+          Company: "",
+          Description: "",
+          StartDate: "",
+          EndDate: "",
+        },
+      ],
+      Education: [
+        {
+          Institute: "",
+          Degree: "",
+          Specialization: "",
+          GPA: "",
+          StartDate: "",
+          EndDate: "",
+        },
+      ],
       Skills: {
         Tools: [],
         Workflow: [],
