@@ -27,6 +27,9 @@ class App extends Component {
       Dark: !this.state.Dark,
     });
   };
+  handleChange = (e) => {
+    console.log(`${e.target.name}: ${e.target.value}`);
+  };
   render() {
     return (
       // this.state.Dark sets current state of dark variable to header (True gives dark and False gives light mode)
@@ -49,6 +52,7 @@ class App extends Component {
                   FullName: `${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`,
                   ...this.state.DetailsData,
                 }}
+                onChange={this.handleChange}
               />
             </div>
             <code className="col-12 col-sm-6 scroll-div">

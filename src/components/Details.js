@@ -1,6 +1,6 @@
 import FormGroup from "./Bootstrap/FormGroup";
 
-const Details = ({ DetailsData }) => {
+const Details = ({ DetailsData, onChange }) => {
   const Desc = {
     FullName: ["text", "Full name", "Your full name."],
     FirstName: ["text", "First name", "Please enter your FirstName."],
@@ -38,6 +38,7 @@ const Details = ({ DetailsData }) => {
           Type={Desc[fd][1]}
           Id={fd}
           Desc={Desc[fd][2]}
+          onChange={onChange}
         />
       ))}
     </div>
