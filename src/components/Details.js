@@ -1,3 +1,4 @@
+import Experience from "./Bootstrap/Form/Experience";
 import FormGroup from "./Bootstrap/FormGroup";
 
 const Details = ({ DetailsData, onChange }) => {
@@ -53,9 +54,8 @@ const Details = ({ DetailsData, onChange }) => {
           )
       )}
       <h3>Experience</h3>
-      {JSON.stringify(DetailsData.Experience)}
+      <Experience Experiences={DetailsData.Experience} />
       <h3>Education</h3>
-      {JSON.stringify(DetailsData.Education)}
       <h3>Skills</h3>
       <h3>Interests</h3>
       <h3>Awards</h3>
