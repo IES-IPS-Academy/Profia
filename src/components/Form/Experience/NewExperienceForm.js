@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { DatePickerComponent } from "@syncfusion/ej2-react-calendars";
 import { createExperience } from "./actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -28,6 +29,21 @@ const NewExperienceForm = ({ experiences = [], onCreatePressed }) => {
         value={desc}
         onChange={(e) => setDesc(e.target.value)}
       />
+      <div className="row mb-2">
+        <div className="col">
+          <DatePickerComponent
+            placeholder="Start Date"
+            format="MMM-yyyy"
+            start="Year"
+            depth="Year"
+            value={start}
+            onChange={(e) =>
+              setStartDate(moment(e.target.value).format("MMMM YYYY"))
+            }
+            cleared={() => setStartDate("")}
+          />
+        </div>
+      </div>
     </div>
   );
 };
