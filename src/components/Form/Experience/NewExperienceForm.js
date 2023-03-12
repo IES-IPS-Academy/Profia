@@ -43,6 +43,20 @@ const NewExperienceForm = ({ experiences = [], onCreatePressed }) => {
             cleared={() => setStartDate("")}
           />
         </div>
+        <div className="col">
+          <DatePickerComponent
+            placeholder="End Date"
+            format="MMM-yyyy"
+            start="Year"
+            depth="Year"
+            value={end}
+            onChange={(e) =>
+              setEndDate(moment(e.target.value).format("MMMM YYYY"))
+            }
+            enabled={endDateEnabled}
+            cleared={() => setEndDate("")}
+          />
+        </div>
       </div>
     </div>
   );
