@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { DatePickerComponent } from "@syncfusion/ej2-react-calendars";
+import moment from "moment";
+import { connect } from "react-redux";
 import { createExperience } from "./actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -116,3 +118,13 @@ const NewExperienceForm = ({ experiences = [], onCreatePressed }) => {
     </div>
   );
 };
+
+const mapStateToProps = (state) => ({
+  experiences: state.experiences,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onCreatePressed: (experience) => dispatch(createExperience(experience)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewExperienceForm);
