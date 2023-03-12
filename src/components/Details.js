@@ -35,6 +35,7 @@ const Details = ({ DetailsData, onChange }) => {
   };
   return (
     <div className="Details">
+      <h3>Basic Information</h3>
       {Object.keys(DetailsData).map(
         (fd) =>
           Object.keys(Desc).includes(fd) && (
@@ -51,6 +52,13 @@ const Details = ({ DetailsData, onChange }) => {
             />
           )
       )}
+      <h3>Experience</h3>
+      {JSON.stringify(DetailsData.Experience)}
+      <h3>Education</h3>
+      {JSON.stringify(DetailsData.Education)}
+      <h3>Skills</h3>
+      <h3>Interests</h3>
+      <h3>Awards</h3>
     </div>
   );
 };
