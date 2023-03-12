@@ -14,6 +14,7 @@ export const educations = (state = [], action) => {
       };
       return state.concat(newEducation);
     }
+    // If same degree is entered twice it'll not be accepted
     case REMOVE_EDUCATION: {
       const { education } = payload;
       return state.filter((obj) => obj.education.degree !== education.degree);
