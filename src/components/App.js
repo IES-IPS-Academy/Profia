@@ -1,77 +1,55 @@
 import React, { Component } from "react";
 import Header from "./Bootstrap/Header";
+import Split from "react-split";
 import Code from "./Code";
-import Details from "./Details";
+import Form from "./Form";
 import he from "he";
+import Preview from "./Preview";
 
-// React class component for the App
 class App extends Component {
   state = {
-    // Default state for app header
     Dark: true,
-    // Default values for user details
     DetailsData: {
       FirstName: "",
       LastName: "",
-      Thumbnail: "",
+      Thubmnail: "",
       URL: "",
       Description: "",
-      KeyWords: "",
+      Keywords: "",
       Address: "",
       Phone: "",
       Email: "",
+      Colour: "#bd5e38",
       Socials: {
-        Facebook: "",
-        WhatsApp: "",
-        Instagram: "",
-        Twitter: "",
-        LinkedIn: "",
-        GitHub: "",
-        StackOverflow: "",
+        Facebook: "xyz",
+        WhatsApp: "xyz",
+        Instagram: "xyz",
+        Twitter: "xyz",
+        LinkedIn: "xyz",
+        GitHub: "xyz",
+        StackOverflow: "xyz",
       },
-      Experience: [
-        {
-          Role: "",
-          Company: "",
-          Description: "",
-          StartDate: "",
-          EndDate: "",
-        },
-      ],
-      Education: [
-        {
-          Institute: "",
-          Degree: "",
-          Specialization: "",
-          GPA: "",
-          StartDate: "",
-          EndDate: "",
-        },
-      ],
-      Skills: {
-        Tools: [],
-        Workflow: [],
-      },
-      Interests: [],
-      Awards: [],
     },
+    fileDownloadUrl: null,
+    PreviewMode: false,
   };
-  // Functiion to toggle dark mode for header
+
   toggleHeader = () => {
     this.setState({
       Dark: !this.state.Dark,
     });
   };
-  // Function to handle changes
+
   handleChange = (e) => {
     this.setState({
       DetailsData: {
         ...this.state.DetailsData,
         [e.target.name]: e.target.value,
       },
+      PreviewMode: false,
     });
   };
-  // Funtion for download button
+
   download = () => {
     let output = he.decode(
       document.getElementsByClassName("codefile")[0].innerHTML
@@ -84,41 +62,100 @@ class App extends Component {
       this.setState({ fileDownloadUrl: "" });
     });
   };
+
   render() {
     return (
-      // this.state.Dark sets current state of dark variable to header (True gives dark and False gives light mode)
       <div className="App">
         <Header dark={this.state.Dark} className="Header">
           <span>Portfolio Generator</span>
           <button
-            className="btn btn-sm btn-outline-primary ml-3 rounded-circle"
+            className="btn btn-sm btn-outline-primary rounded-circle"
             onClick={this.toggleHeader}
           >
-            {/* this.state.Dark checks for boolean value of dark variable. If it is true, the option shown is to switch to light mode, if false, the option shown is dark mode */}
-            <i class={"fa fa-" + (this.state.Dark ? "sun" : "moon") + "-o"}></i>
+            <i
+              className={"fa fa-" + (this.state.Dark ? "sun" : "moon") + "-o"}
+            ></i>
           </button>
         </Header>
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 col-sm-6 scroll-div">
-              <Details
+          <Split className="split">
+            <div className="p-3" /*className='col-12 col-md-6'*/>
+              <Form
                 DetailsData={{
                   FullName: `${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`,
                   ...this.state.DetailsData,
                 }}
                 onChange={this.handleChange}
               />
+              <button
+                className="btn btn-success"
+                onClick={() => {
+                  this.download();
+                }}
+                disabled={this.state.PreviewMode}
+                title="Go to the Code View to download."
+              >
+                Download
+              </button>
+              <a
+                className="d-none"
+                download={"portfolio.html"}
+                href={this.state.fileDownloadUrl}
+                ref={(e) => (this.doFileDownload = e)}
+              >
+                Download
+              </a>
             </div>
-            <code className="col-12 col-sm-6 scroll-div">
-              <Code
-                {...this.state.DetailsData}
-                FullName={`${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`}
-              />
-            </code>
-          </div>
+            <div className="p-3" /*className='col-12 col-md-6'*/>
+              <ul className="nav nav-tabs mb-2">
+                <li className="nav-item">
+                  <span
+                    className={
+                      "nav-link " + (!this.state.PreviewMode ? "active" : "")
+                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      this.setState({
+                        PreviewMode: false,
+                      });
+                    }}
+                  >
+                    Code
+                  </span>
+                </li>
+                <li className="nav-item">
+                  <span
+                    className={
+                      "nav-link " + (this.state.PreviewMode ? "active" : "")
+                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      this.setState({
+                        PreviewMode: true,
+                      });
+                    }}
+                  >
+                    Preview
+                  </span>
+                </li>
+              </ul>
+              {this.state.PreviewMode ? (
+                <Preview
+                  {...this.state.DetailsData}
+                  FullName={`${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`}
+                />
+              ) : (
+                <Code
+                  {...this.state.DetailsData}
+                  FullName={`${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`}
+                />
+              )}
+            </div>
+          </Split>
         </div>
       </div>
     );
   }
 }
+
 export default App;
