@@ -57,6 +57,24 @@ const NewExperienceForm = ({ experiences = [], onCreatePressed }) => {
             cleared={() => setEndDate("")}
           />
         </div>
+        <div className="col">
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value={presentJob}
+              id="presentJob"
+              onChange={(e) => {
+                setPresentJob(e.target.checked);
+                setEndDateEnabled(!endDateEnabled);
+              }}
+              disabled={end !== ""}
+            />
+            <label className="form-check-label" htmlFor="presentJob">
+              Present
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   );
