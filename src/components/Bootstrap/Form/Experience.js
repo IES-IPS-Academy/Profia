@@ -1,5 +1,4 @@
-import React from "react";
-
+// react arrow function export component for experience field
 const Experience = ({ Experiences }) => {
   return (
     <div className="Experience">

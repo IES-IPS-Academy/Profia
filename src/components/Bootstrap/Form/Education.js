@@ -1,3 +1,4 @@
+// react arrow function export component for education field
 const Education = ({ Educations }) => {
   return (
     <div className="Education">
