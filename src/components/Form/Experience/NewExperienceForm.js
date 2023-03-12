@@ -14,6 +14,13 @@ const NewExperienceForm = ({ experiences = [], onCreatePressed }) => {
         value={position}
         onChange={(e) => setPosition(e.target.value)}
       />
+      <input
+        className="form-control form-control-sm mb-2"
+        type="text"
+        placeholder="Company"
+        value={company}
+        onChange={(e) => setCompany(e.target.value)}
+      />
     </div>
   );
 };
