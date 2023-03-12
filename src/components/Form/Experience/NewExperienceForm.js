@@ -6,6 +6,12 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const NewExperienceForm = ({ experiences = [], onCreatePressed }) => {
   const [position, setPosition] = useState("");
+  const [company, setCompany] = useState("");
+  const [desc, setDesc] = useState("");
+  const [start, setStartDate] = useState("");
+  const [end, setEndDate] = useState("");
+  const [presentJob, setPresentJob] = useState(false);
+  const [endDateEnabled, setEndDateEnabled] = useState(true);
   return (
     <div className="border rounded bg-light p-3 m-2">
       <input
@@ -75,6 +81,37 @@ const NewExperienceForm = ({ experiences = [], onCreatePressed }) => {
             </label>
           </div>
         </div>
+      </div>
+
+      <div className="text-right">
+        <button
+          className="btn btn-success btn-sm rounded-circle"
+          disabled={
+            position === "" ||
+            company === "" ||
+            desc === "" ||
+            start === "" ||
+            (end === "" && !presentJob)
+          }
+          onClick={() => {
+            onCreatePressed({
+              position,
+              company,
+              desc,
+              start,
+              end,
+              presentJob,
+            });
+            setPosition("");
+            setCompany("");
+            setDesc("");
+            setStartDate("");
+            setEndDate("");
+            setPresentJob(false);
+          }}
+        >
+          <FontAwesomeIcon icon={faPlus} />
+        </button>
       </div>
     </div>
   );
