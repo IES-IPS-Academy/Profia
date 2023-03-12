@@ -21,6 +21,13 @@ const NewExperienceForm = ({ experiences = [], onCreatePressed }) => {
         value={company}
         onChange={(e) => setCompany(e.target.value)}
       />
+      <textarea
+        className="form-control form-control-sm mb-2"
+        placeholder="Role description"
+        rows="3"
+        value={desc}
+        onChange={(e) => setDesc(e.target.value)}
+      />
     </div>
   );
 };
