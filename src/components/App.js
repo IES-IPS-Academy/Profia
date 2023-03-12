@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Bootstrap/Header";
 import Code from "./Code";
 import Details from "./Details";
+import he from "he";
 
 // React class component for the App
 class App extends Component {
