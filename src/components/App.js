@@ -61,12 +61,26 @@ class App extends Component {
       Dark: !this.state.Dark,
     });
   };
+  // Function to handle changes
   handleChange = (e) => {
     this.setState({
       DetailsData: {
         ...this.state.DetailsData,
         [e.target.name]: e.target.value,
       },
+    });
+  };
+  // Funtion for download button
+  download = () => {
+    let output = he.decode(
+      document.getElementsByClassName("codefile")[0].innerHTML
+    );
+    const blob = new Blob([output]);
+    const fileDownloadUrl = URL.createObjectURL(blob);
+    this.setState({ fileDownloadUrl: fileDownloadUrl }, () => {
+      this.doFileDownload.click();
+      URL.revokeObjectURL(fileDownloadUrl);
+      this.setState({ fileDownloadUrl: "" });
     });
   };
   render() {
