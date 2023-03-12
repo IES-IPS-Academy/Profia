@@ -17,6 +17,7 @@ const Code = ({
   Interests,
   Awards,
 }) => {
+  // Meta contains all the socials and their links for creating redirecting link and icons in output code
   const Meta = {
     Facebook: ["facebook-f", "https://fb.me/"],
     WhatsApp: ["whatsapp", "https://wa.me/"],

@@ -2,6 +2,7 @@ import Experience from "./Bootstrap/Form/Experience";
 import Education from "./Bootstrap/Form/Education";
 import FormGroup from "./Bootstrap/FormGroup";
 
+// Data structure for different details fields
 const Details = ({ DetailsData, onChange }) => {
   const Desc = {
     FullName: [
