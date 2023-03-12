@@ -5,7 +5,7 @@ import Experience from "./Experience";
 import { connect } from "react-redux";
 import { removeExperience } from "./actions";
 
-// experiences.map shows the already exixting experience and on clicking the remove button remove experience button is triggered
+// experiences.map shows the already existing experience and on clicking the remove button remove experience action is triggered
 const ExperienceList = ({ experiences = [], onRemovePressed }) => {
   return (
     <div>
