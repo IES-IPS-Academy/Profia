@@ -59,8 +59,11 @@ const Details = ({ DetailsData, onChange }) => {
       <h3>Education</h3>
       <Education Educations={DetailsData.Education} />
       <h3>Skills</h3>
+      {JSON.stringify(DetailsData.Skills, null, 2)}
       <h3>Interests</h3>
+      {JSON.stringify(FormData.Interests, null, 2)}
       <h3>Awards</h3>
+      {JSON.stringify(FormData.Awards, null, 2)}
     </div>
   );
 };

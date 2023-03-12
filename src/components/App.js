@@ -19,6 +19,15 @@ class App extends Component {
       Address: "",
       Phone: "",
       Email: "",
+      Socials: {
+        Facebook: "",
+        WhatsApp: "",
+        Instagram: "",
+        Twitter: "",
+        LinkedIn: "",
+        GitHub: "",
+        StackOverflow: "",
+      },
       Experience: [
         {
           Role: "",
