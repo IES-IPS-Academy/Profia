@@ -35,19 +35,21 @@ const Details = ({ DetailsData, onChange }) => {
   };
   return (
     <div className="Details">
-      {Object.keys(DetailsData).map((fd) => (
-        <FormGroup
-          key={fd}
-          Value={DetailsData[fd]}
-          Label={Desc[fd][1]}
-          Type={Desc[fd][1]}
-          Id={fd}
-          Placeholder={`Enter input for ${Desc[fd][1]}`}
-          Desc={Desc[fd][2]}
-          onChange={fd === "FullName" ? undefined : onChange}
-          readOnly={fd === "FullName" ? true : undefined}
-        />
-      ))}
+      {Object.keys(DetailsData).map((fd) =>
+        Object.keys(Desc).includes(fd)(
+          <FormGroup
+            key={fd}
+            Value={DetailsData[fd]}
+            Label={Desc[fd][1]}
+            Type={Desc[fd][1]}
+            Id={fd}
+            Placeholder={`Enter input for ${Desc[fd][1]}`}
+            Desc={Desc[fd][2]}
+            onChange={fd === "FullName" ? undefined : onChange}
+            readOnly={fd === "FullName" ? true : undefined}
+          />
+        )
+      )}
     </div>
   );
 };
