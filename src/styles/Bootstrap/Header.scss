@@ -1,30 +1,21 @@
 .Header {
     margin-bottom: 15px;
-    display: flex;
     flex-grow: 1;
+    display: flex;
     .navbar-brand {
-        flex-grow: 1;
-        margin: 0;
-        width: 100%;
-        display: flex;
-        >span:first-child {
-            flex: 1 0 0;
-            text-align: center;
-        }
-    }
-    button {
-        flex-shrink: 1;
-        user-select: none;
-    }
-    .btn-sn {
-        margin-left: auto;
-    }
-    .btn:focus {
-        outline: none;
-        box-shadow: none;
+      flex-grow: 1;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      span {
+        flex: 1 0 0;
+        text-align: center;
       }
-}
-.scroll-div {
-    height: 100vh;
-    overflow-y: scroll;
-}
+      button {
+        flex-shrink: 1;
+      }
+    }
+    .btn-sm {
+      margin-left: auto;
+    }
+  }
