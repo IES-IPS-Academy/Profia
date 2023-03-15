@@ -28,12 +28,13 @@ const Code = ({
     Twitter: ["twitter", "https://twitter.com/"],
     LinkedIn: ["linkedin-in", "https://linkedin.com/in/"],
     GitHub: ["github", "https://github.com/"],
-    StackOverflow: ["stack-overflow", "https://stackoverlow.com/u/"],
+    StackOverflow: ["stack-overflow", "https://stackoverflow.com/u/"],
   };
   // Return contains the code that will be generate as output to the user
   return (
     <div className="Code">
-      <pre className="broder rounded bg-light p-3 codefile">{`<!DOCTYPE html>
+      <pre className="border rounded bg-light p-3 codefile">
+        {`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -55,13 +56,14 @@ const Code = ({
     <meta property="twitter:description" content="${Description}">
     <meta property="twitter:image" content="${Thumbnail}">
     <title>${FullName}'s Portfolio</title>
+
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="https://startbootstrap.github.io/startbootstrap-resume/css/styles.css" rel="stylesheet" >
+    <link href="https://startbootstrap.github.io/startbootstrap-resume/css/styles.css" rel="stylesheet">
     <style>.bg-primary {--bs-bg-opacity: 1; background-color: ${Colour} !important;}
            .social-icon:hover {background-color: ${Colour} !important;}
            .text-primary {--bs-text-opacity: 1; color: ${Colour} !important;}
@@ -74,7 +76,7 @@ const Code = ({
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">${FullName}</span>
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${Thumbnail}" alt="${FullName}" ></span>
+        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${Thumbnail}" alt="${FullName}"></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -111,7 +113,7 @@ ${Object.keys(Socials).map(
           </div>
         </div>
       </section>
-      <hr class="m-0" >
+      <hr class="m-0">
       <!-- Experience-->
       <section class="resume-section" id="experience">
         <div class="resume-section-content">
@@ -141,7 +143,7 @@ ${Object.keys(Socials).map(
 `)}
         </div>
       </section>
-      <hr class="m-0" >
+      <hr class="m-0">
       <!-- Education-->
       <section class="resume-section" id="education">
         <div class="resume-section-content">
@@ -169,7 +171,7 @@ ${Object.keys(Socials).map(
 `)}
         </div>
       </section>
-      <hr class="m-0" >
+      <hr class="m-0">
       <!-- Skills-->
       <section class="resume-section" id="skills">
         <div class="resume-section-content">
@@ -188,7 +190,7 @@ ${Object.keys(Socials).map(
           </ul>
         </div>
       </section>
-      <hr class="m-0" >
+      <hr class="m-0">
       <!-- Interests-->
       <section class="resume-section" id="interests">
         <div class="resume-section-content">
@@ -201,7 +203,7 @@ ${Object.keys(Socials).map(
 `)}
         </div>
       </section>
-      <hr class="m-0" >
+      <hr class="m-0">
       <!-- Awards-->
       <section class="resume-section" id="awards">
         <div class="resume-section-content">
@@ -222,8 +224,12 @@ ${Object.keys(Socials).map(
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-    </html>`}</pre>
+    <!-- Core theme JS-->
+    <script src="https://startbootstrap.github.io/startbootstrap-resume/js/scripts.js"></script>
+  </body>
+</html>
+`}
+      </pre>
     </div>
   );
 };
