@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import Header from "./Bootstrap/Header";
 import Split from "react-split";
 import Code from "./Code";
-import Details from "./Details";
+import Form from "./Form";
 import he from "he";
 import Preview from "./Preview";
 
 class App extends Component {
   state = {
     Dark: true,
-    DetailsData: {
+    FormData: {
       FirstName: "",
       LastName: "",
       Thubmnail: "",
@@ -42,8 +42,8 @@ class App extends Component {
 
   handleChange = (e) => {
     this.setState({
-      DetailsData: {
-        ...this.state.DetailsData,
+      FormData: {
+        ...this.state.FormData,
         [e.target.name]: e.target.value,
       },
       PreviewMode: false,
@@ -80,10 +80,10 @@ class App extends Component {
         <div className="container-fluid">
           <Split className="split">
             <div className="p-3" /*className='col-12 col-md-6'*/>
-              <Details
-                DetailsData={{
-                  FullName: `${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`,
-                  ...this.state.DetailsData,
+              <Form
+                FormData={{
+                  FullName: `${this.state.FormData.FirstName} ${this.state.FormData.LastName}`,
+                  ...this.state.FormData,
                 }}
                 onChange={this.handleChange}
               />
@@ -141,13 +141,13 @@ class App extends Component {
               </ul>
               {this.state.PreviewMode ? (
                 <Preview
-                  {...this.state.DetailsData}
-                  FullName={`${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`}
+                  {...this.state.FormData}
+                  FullName={`${this.state.FormData.FirstName} ${this.state.FormData.LastName}`}
                 />
               ) : (
                 <Code
-                  {...this.state.DetailsData}
-                  FullName={`${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`}
+                  {...this.state.FormData}
+                  FullName={`${this.state.FormData.FirstName} ${this.state.FormData.LastName}`}
                 />
               )}
             </div>
