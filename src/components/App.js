@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./Bootstrap/Header";
 import Split from "react-split";
 import Code from "./Code";
-import Form from "./Details";
+import Details from "./Details";
 import he from "he";
 import Preview from "./Preview";
 
@@ -80,7 +80,7 @@ class App extends Component {
         <div className="container-fluid">
           <Split className="split">
             <div className="p-3" /*className='col-12 col-md-6'*/>
-              <Form
+              <Details
                 DetailsData={{
                   FullName: `${this.state.DetailsData.FirstName} ${this.state.DetailsData.LastName}`,
                   ...this.state.DetailsData,
