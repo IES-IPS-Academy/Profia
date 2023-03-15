@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./Bootstrap/Header";
 import Split from "react-split";
 import Code from "./Code";
-import Form from "./Form";
+import Form from "./Details";
 import he from "he";
 import Preview from "./Preview";
 

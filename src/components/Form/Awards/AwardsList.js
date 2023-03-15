@@ -1,6 +1,6 @@
 import React from "react";
 import NewAwardForm from "./NewAwardForm";
-import Award from "./Award";
+import Award from "./Awards";
 import { connect } from "react-redux";
 import { removeAward } from "./actions";
 

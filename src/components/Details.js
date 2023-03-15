@@ -1,11 +1,11 @@
 import FormGroup from "./Bootstrap/FormGroup";
-import AwardList from "./Form/Awards/AwardList";
+import AwardList from "./Form/Awards/AwardsList";
 import EducationList from "./Form/Education/EducationList";
 import ExperienceList from "./Form/Experience/ExperienceList";
 import InterestList from "./Form/Interests/InterestList";
 import SkillsList from "./Form/Skills/SkillsList";
 
-const Form = ({ FormData, onChange }) => {
+const Details = ({ FormData, onChange }) => {
   const Desc = {
     FullName: [
       "text",
@@ -76,4 +76,4 @@ const Form = ({ FormData, onChange }) => {
   );
 };
 
-export default Form;
+export default Details;

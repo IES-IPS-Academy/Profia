@@ -1,3 +1,5 @@
+import { connect } from "react-redux";
+
 // Object that contains all the variable names used to generate output code
 const Code = ({
   FullName,
@@ -37,21 +39,21 @@ const Code = ({
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="${FullName}">
-    <link rel="icon" type="image/x-icon" href="${Thubmnail}">
+    <link rel="icon" type="image/x-icon" href="${Thumbnail}">
     <meta property="og:title" content="${FullName}">
     <meta property="og:site_name" content="${FullName}'s Portfolio">
     <meta property="og:url" content="${URL}">
     <meta property="og:description" content="${Description}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="${Thubmnail}">
+    <meta property="og:image" content="${Thumbnail}">
     <meta name="title" content="${FullName}'s Portfolio">
     <meta name="description" content="${Description}">
-    <meta name="keywords" content="${Keywords}">
+    <meta name="keywords" content="${KeyWords}">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="${URL}">
     <meta property="twitter:title" content="${FullName}'s Portfolio">
     <meta property="twitter:description" content="${Description}">
-    <meta property="twitter:image" content="${Thubmnail}">
+    <meta property="twitter:image" content="${Thumbnail}">
     <title>${FullName}'s Portfolio</title>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -72,7 +74,7 @@ const Code = ({
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">${FullName}</span>
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${Thubmnail}" alt="${FullName}" ></span>
+        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${Thumbnail}" alt="${FullName}" ></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
