@@ -145,10 +145,12 @@ class App extends Component {
                   FullName={`${this.state.FormData.FirstName} ${this.state.FormData.LastName}`}
                 />
               ) : (
-                <Code
-                  {...this.state.FormData}
-                  FullName={`${this.state.FormData.FirstName} ${this.state.FormData.LastName}`}
-                />
+                <code>
+                  <Code
+                    {...this.state.FormData}
+                    FullName={`${this.state.FormData.FirstName} ${this.state.FormData.LastName}`}
+                  />
+                </code>
               )}
             </div>
           </Split>
