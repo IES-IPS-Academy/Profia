@@ -8,7 +8,7 @@ import Preview from "./Preview";
 
 class App extends Component {
   state = {
-    Dark: true,
+    Dark: false,
     FormData: {
       FirstName: "",
       LastName: "",
@@ -32,12 +32,6 @@ class App extends Component {
     },
     fileDownloadUrl: null,
     PreviewMode: false,
-  };
-
-  toggleHeader = () => {
-    this.setState({
-      Dark: !this.state.Dark,
-    });
   };
 
   handleChange = (e) => {
@@ -68,14 +62,6 @@ class App extends Component {
       <div className="App">
         <Header dark={this.state.Dark} className="Header">
           <span>Portfolio Generator</span>
-          <button
-            className="btn btn-sm btn-outline-primary rounded-circle"
-            onClick={this.toggleHeader}
-          >
-            <i
-              className={"fa fa-" + (this.state.Dark ? "sun" : "moon") + "-o"}
-            ></i>
-          </button>
         </Header>
         <div className="container-fluid">
           <Split className="split">
