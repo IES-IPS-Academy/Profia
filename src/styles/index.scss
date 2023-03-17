@@ -95,6 +95,20 @@ body{
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+.scroll {
+    max-height: 85vh;
+    overflow: auto;
+}
+.scroll::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: rgb(41, 41, 46);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: var(--color-gray);
+}
+
 
 .form__group input,
 .form__group textarea,

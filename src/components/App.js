@@ -65,7 +65,7 @@ class App extends Component {
         </Header>
         <div className="container-fluid">
           <Split className="split">
-            <div className="p-3 form__group">
+            <div className="p-3 form__group scroll">
               <Form
                 FormData={{
                   FullName: `${this.state.FormData.FirstName} ${this.state.FormData.LastName}`,
@@ -92,7 +92,7 @@ class App extends Component {
                 Download
               </a>
             </div>
-            <div className="p-3" /*className='col-12 col-md-6'*/>
+            <div className="p-3 scroll">
               <ul className="nav nav-tabs mb-2">
                 <li className="nav-item">
                   <span
