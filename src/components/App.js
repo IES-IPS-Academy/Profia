@@ -65,7 +65,7 @@ class App extends Component {
         </Header>
         <div className="container-fluid">
           <Split className="split">
-            <div className="p-3">
+            <div className="p-3 form__group">
               <Form
                 FormData={{
                   FullName: `${this.state.FormData.FirstName} ${this.state.FormData.LastName}`,
