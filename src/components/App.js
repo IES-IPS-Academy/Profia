@@ -61,7 +61,9 @@ class App extends Component {
     return (
       <div className="App container">
         <Header dark={this.state.Dark} className="Header">
-          <span>Portfolio Generator</span>
+          <span>
+            <b>Profia: </b>Portfolio Generator
+          </span>
         </Header>
         <div className="container-fluid">
           <Split className="split">
