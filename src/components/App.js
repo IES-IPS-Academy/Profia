@@ -59,7 +59,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <Header dark={this.state.Dark} className="Header">
           <span>Portfolio Generator</span>
         </Header>
@@ -79,7 +79,7 @@ class App extends Component {
                   this.download();
                 }}
                 disabled={this.state.PreviewMode}
-                title="Go to the Code View to download."
+                title="Download HTML page for your portfolio."
               >
                 Download
               </button>
