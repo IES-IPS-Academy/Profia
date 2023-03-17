@@ -141,3 +141,15 @@ body{
     color: var(--color-light);
     padding: 0 10rem;
 }
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media only screen and (min-width: 2100px) {
+    html {
+        font-size: 75%;
+    }
+}
