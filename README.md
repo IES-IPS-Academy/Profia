@@ -1,3 +1,5 @@
-# Portfolio-Resume Generator
+# Profia: Portfolio Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Profia is a static website generator specifically for generating portfolio websites. It is ideal for people who rewuire a quick portfolio or for generating a boilerplate code for a custom portfolio.
+
+## Features
