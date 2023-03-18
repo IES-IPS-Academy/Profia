@@ -13,6 +13,7 @@
 html {
     font-size: 90%;
 }
+
 body{
     line-height: 1.6;
     font-weight: 400;
@@ -28,6 +29,9 @@ body{
     width: 100%;
     margin: auto;
 }
+
+// For buttons 
+
 .btn {
     background-color: rgb(96, 95, 95);
     border: none;
@@ -52,6 +56,8 @@ body{
     height: 1.6rem;
 }
 
+// For input form
+
 .form__group {
     margin-bottom: 2rem;
     width: 100%;
@@ -62,7 +68,6 @@ body{
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
-
 
 .form__group input,
 .form__group textarea,
@@ -96,6 +101,8 @@ body{
     padding: 0 10rem;
 }
 
+// For scrollbar 
+
 .scroll {
     max-height: 85vh;
     overflow: auto;
@@ -109,6 +116,9 @@ body{
     border-radius: 1rem;
     background-color: var(--color-gray);
 }
+
+// Media queries 
+
 @media only screen and (min-width: 1200px) {
     html {
         font-size: 80%;
