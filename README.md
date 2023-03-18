@@ -20,5 +20,5 @@ Profia is a static website generator specifically for generating portfolio websi
 - SCSS
 - Javascript
 - Bootstrap
-- HTML 5
+- React
 
