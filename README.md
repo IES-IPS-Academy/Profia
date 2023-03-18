@@ -15,10 +15,10 @@ Profia is a static website generator specifically for generating portfolio websi
 ## Tools
 
 - Node v16.17.1
-- npm 9.6.1
-- HTML 5
+- npm v9.6.1
+- HTML v5
 - SCSS
 - Javascript
-- Bootstrap
-- React
+- Bootstrap v4.6.1
+- React v17.0.2
 
