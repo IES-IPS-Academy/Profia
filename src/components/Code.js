@@ -105,7 +105,10 @@ const Code = ({
           </div>
           <p class="lead mb-5">${Description}</p>
           <div class="social-icons">
-
+          <a class="social-icon" href="https://www.instagram.com/${Instagram}"><i class="fab fa-instagram"></i></a>
+          <a class="social-icon" href="https://twitter.com/${Twitter}"><i class="fab fa-twitter"></i></a>
+          <a class="social-icon" href="https://www.linkedin.com/in/${LinkedIn}"><i class="fab fa-linkedin-in"></i></a>
+          <a class="social-icon" href="https://github.com/${GitHub}"><i class="fab fa-github"></i></a>
           </div>
         </div>
       </section>
