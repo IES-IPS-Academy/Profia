@@ -12,7 +12,10 @@ const Preview = ({
   Address,
   Phone,
   Email,
-  Socials,
+  Instagram,
+  Twitter,
+  LinkedIn,
+  GitHub,
   experiences,
   educations,
   skills,
@@ -22,13 +25,10 @@ const Preview = ({
 }) => {
   // Meta contains all the socials and their links for creating redirecting link and icons in output code
   const Meta = {
-    Facebook: ["facebook-f", "https://fb.me/"],
-    WhatsApp: ["whatsapp", "https://wa.me/"],
     Instagram: ["instagram", "https://instagr.am/"],
     Twitter: ["twitter", "https://twitter.com/"],
     LinkedIn: ["linkedin-in", "https://linkedin.com/in/"],
     GitHub: ["github", "https://github.com/"],
-    StackOverflow: ["stack-overflow", "https://stackoverflow.com/u/"],
   };
   const finalHTML = `<!DOCTYPE html>
 <html lang="en">
@@ -101,11 +101,7 @@ const Preview = ({
           </div>
           <p class="lead mb-5">${Description}</p>
           <div class="social-icons">
-${Object.keys(Socials).map(
-  (soc) =>
-    `            <a class="social-icon" href="${Meta[soc][1]}${Socials[soc]}"><i class="fab fa-${Meta[soc][0]}"></i></a>`
-).join(`
-`)}
+
           </div>
         </div>
       </section>

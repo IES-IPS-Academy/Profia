@@ -37,6 +37,18 @@ const Form = ({ FormData, onChange }) => {
       "Email Address",
       "Please enter your primary email address.",
     ],
+    Instagram: [
+      "text",
+      "Instagram profile",
+      "Please enter your Instagram account.",
+    ],
+    Twitter: ["text", "Twitter profile", "Please enter your Twitter account."],
+    LinkedIn: [
+      "text",
+      "LinkedIn profile",
+      "Please enter your LinkedIn account.",
+    ],
+    GitHub: ["text", "GitHub profile", "Please enter your GitHub account."],
     Colour: [
       "color",
       "Theme Colour",
