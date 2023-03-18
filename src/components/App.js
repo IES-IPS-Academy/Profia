@@ -19,7 +19,7 @@ class App extends Component {
       Address: "",
       Phone: "",
       Email: "",
-      Colour: "#bd5e38",
+      Colour: "#0",
       Socials: {
         Facebook: "xyz",
         WhatsApp: "xyz",
