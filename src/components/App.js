@@ -23,7 +23,7 @@ class App extends Component {
       Twitter: "",
       LinkedIn: "",
       GitHub: "",
-      Colour: "#bd5e38",
+      Colour: "#1b1b2f",
     },
     fileDownloadUrl: null,
     PreviewMode: false,

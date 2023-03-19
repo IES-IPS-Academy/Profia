@@ -23,13 +23,6 @@ const Preview = ({
   awards,
   Colour,
 }) => {
-  // Meta contains all the socials and their links for creating redirecting link and icons in output code
-  const Meta = {
-    Instagram: ["instagram", "https://instagr.am/"],
-    Twitter: ["twitter", "https://twitter.com/"],
-    LinkedIn: ["linkedin-in", "https://linkedin.com/in/"],
-    GitHub: ["github", "https://github.com/"],
-  };
   const finalHTML = `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -171,7 +164,6 @@ const Preview = ({
       <section class="resume-section" id="skills">
         <div class="resume-section-content">
           <h2 class="mb-5">Skills</h2>
-          <div class="subheading mb-3">Programming Languages & Tools</div>
           <ul class="fa-ul mb-0">
             ${skills.map(
               (skill) => `
